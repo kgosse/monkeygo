@@ -5,7 +5,7 @@ type Type string
 
 // Token holds a token
 type Token struct {
-	Kind    Type
+	Type    Type
 	Literal string
 }
 
