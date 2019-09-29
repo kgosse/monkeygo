@@ -29,6 +29,9 @@ const (
 	LT = "<"
 	GT = ">"
 
+	EQ    = "=="
+	NOTEQ = "!="
+
 	// Delimiters
 	COMMA     = ","
 	SEMICOLON = ";"
