@@ -20,7 +20,10 @@ type Parser struct {
 
 // New returns a new Parser
 func New(l *lexer.Lexer) *Parser {
-	p := &Parser{l: l}
+	p := &Parser{
+		l:      l,
+		errors: []string{},
+	}
 
 	p.nextToken()
 	p.nextToken()
@@ -101,4 +104,9 @@ func (p *Parser) parseLetStatement() *ast.LetStatement {
 	}
 
 	return stmt
+}
+
+// Errors returns Parser's errors
+func (p *Parser) Errors() []string {
+	return p.errors
 }
